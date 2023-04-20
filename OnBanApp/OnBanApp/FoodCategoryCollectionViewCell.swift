@@ -42,4 +42,12 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
             titleLabel.leadingAnchor.constraint(equalTo: cellView.leadingAnchor)]
         )
     }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+
+    func configure(withTitle title: String) {
+        titleLabel.text = title
+    }
 }
