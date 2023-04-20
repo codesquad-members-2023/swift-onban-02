@@ -10,10 +10,9 @@ import UIKit
 class HomeViewController: UIViewController {
     let navigationBar = UINavigationBar()
     let collectionView: UICollectionView = {
-        let flowLayout = UICollectionViewFlowLayout()
+        let layout = HomeViewController.createCompositionLayout()
         
-        let collection = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
-        
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         return collection
     }()
     
@@ -54,5 +53,21 @@ class HomeViewController: UIViewController {
         collectionView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         
         collectionView.backgroundColor = .cyan
+    // TODO: 여기 고정값들 바꿔. 그리고 변수명도 이상하다.
+    static func createCompositionLayout() -> UICollectionViewCompositionalLayout {
+        // sizeSetting
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.97))
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1264.0 / 852.0 ))
+        //Item
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        //Group
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 1)
+        
+        //Sections
+        let section = NSCollectionLayoutSection(group: group)
+        //Return
+        return UICollectionViewCompositionalLayout(section: section)
     }
+    
 }
