@@ -23,4 +23,23 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         return label
     }()
+        
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        contentView.addSubview(cellView)
+        cellView.addSubview(titleLabel)
+        
+        cellView.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate(
+            [cellView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            cellView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            cellView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            cellView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            
+            titleLabel.leadingAnchor.constraint(equalTo: cellView.leadingAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: cellView.leadingAnchor)]
+        )
+    }
 }
