@@ -18,8 +18,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBackCollectionView(collectionView: collectionView)
-        
+        setCollectionView(collectionView: collectionView)
+        collectionView.dataSource = self
+        collectionView.delegate = self
         setNavigationBar()
     func setNavigationBar() {
         navigationBar.translatesAutoresizingMaskIntoConstraints = false
@@ -68,6 +69,25 @@ class HomeViewController: UIViewController {
         let section = NSCollectionLayoutSection(group: group)
         //Return
         return UICollectionViewCompositionalLayout(section: section)
+    }
+    
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    
+}
+
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCategoryCollectionViewCell.identifier, for: indexPath) as? FoodCategoryCollectionViewCell else {
+            exit(0)
+        }
+        cell.configure(withTitle: "SECTION \(indexPath.row + 1)")
+        return cell
     }
     
 }
