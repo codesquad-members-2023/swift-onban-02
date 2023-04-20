@@ -15,4 +15,12 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
         cell.backgroundColor = .cyan
         return cell
     }()
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        return label
+    }()
 }
