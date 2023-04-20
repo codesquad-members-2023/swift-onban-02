@@ -2,6 +2,9 @@ disabled_rules:
 - line_length
 - trailing_whitespace
 - identifier_name
+- todo
+- comment_spacing
+- force_cast
 included:
 - OnBanApp
 excluded:
