@@ -22,6 +22,8 @@ class HomeViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         setNavigationBar()
+    }
+    
     func setNavigationBar() {
         navigationBar.translatesAutoresizingMaskIntoConstraints = false
         
@@ -44,16 +46,18 @@ class HomeViewController: UIViewController {
         navigationBar.items = [navigationItem]
     }
     
-    func setBackCollectionView(collectionView: UICollectionView) {
+    func setCollectionView(collectionView: UICollectionView) {
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
-        collectionView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        collectionView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 64.0).isActive = true
         collectionView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         collectionView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         
-        collectionView.backgroundColor = .cyan
+        collectionView.backgroundColor = .white
+        collectionView.register(FoodCategoryCollectionViewCell.self, forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.identifier)
+    }
     // TODO: 여기 고정값들 바꿔. 그리고 변수명도 이상하다.
     static func createCompositionLayout() -> UICollectionViewCompositionalLayout {
         // sizeSetting
