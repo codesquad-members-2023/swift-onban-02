@@ -8,5 +8,5 @@
 import UIKit
 
 class FoodCategoryCollectionViewCell: UICollectionViewCell {
-    
+    static let identifier = "CategoryCell"
 }
