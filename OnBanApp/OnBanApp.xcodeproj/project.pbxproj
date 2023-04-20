@@ -15,6 +15,7 @@
 		2AA8161629ED5A74006C6EF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA8161429ED5A74006C6EF9 /* LaunchScreen.storyboard */; };
 		7C8A979E09672BA8D4ACA3C4 /* Pods_OnBanApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F2E13594C3A5D01FDDE1DA /* Pods_OnBanApp.framework */; };
 		E48651C729EFDAD700539390 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E48651C629EFDAD700539390 /* .swiftlint.yml */; };
+		E48651C929EFE05300539390 /* FoodCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48651C829EFE05300539390 /* FoodCategoryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		98F1600C4D5C280543FB3973 /* Pods-OnBanApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnBanApp.release.xcconfig"; path = "Target Support Files/Pods-OnBanApp/Pods-OnBanApp.release.xcconfig"; sourceTree = "<group>"; };
 		D4F2E13594C3A5D01FDDE1DA /* Pods_OnBanApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnBanApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48651C629EFDAD700539390 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		E48651C829EFE05300539390 /* FoodCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				2AA8160929ED5A71006C6EF9 /* AppDelegate.swift */,
 				2AA8160B29ED5A71006C6EF9 /* SceneDelegate.swift */,
 				2AA8160D29ED5A71006C6EF9 /* HomeViewController.swift */,
+				E48651C829EFE05300539390 /* FoodCategoryCollectionViewCell.swift */,
 				2AA8160F29ED5A71006C6EF9 /* Main.storyboard */,
 				2AA8161229ED5A74006C6EF9 /* Assets.xcassets */,
 				2AA8161429ED5A74006C6EF9 /* LaunchScreen.storyboard */,
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48651C929EFE05300539390 /* FoodCategoryCollectionViewCell.swift in Sources */,
 				2AA8160E29ED5A71006C6EF9 /* HomeViewController.swift in Sources */,
 				2AA8160A29ED5A71006C6EF9 /* AppDelegate.swift in Sources */,
 				2AA8160C29ED5A71006C6EF9 /* SceneDelegate.swift in Sources */,
