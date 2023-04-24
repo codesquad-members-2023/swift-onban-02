@@ -22,6 +22,14 @@ class HomeViewController: UIViewController {
         setNavigationBar()
     }
     
+    func setCollectionViewLayoutItemSize() {
+        let layout = UICollectionViewFlowLayout()
+        let width = UIScreen.main.bounds.width * 0.94
+        let height = width / 2.2
+        layout.itemSize = CGSize(width: width, height: height)
+        collectionView.setCollectionViewLayout(layout, animated: false)
+    }
+    
     func setNavigationBar() {
         navigationBar.translatesAutoresizingMaskIntoConstraints = false
         
@@ -50,6 +58,8 @@ class HomeViewController: UIViewController {
     
     func setCollectionView() {
         view.addSubview(collectionView)
+        setCollectionViewLayoutItemSize()
+        
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         collectionView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 64.0).isActive = true
