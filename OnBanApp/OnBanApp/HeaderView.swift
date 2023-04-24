@@ -15,4 +15,14 @@ class HeaderView: UICollectionReusableView {
         cell.backgroundColor = .blue
         return cell
     }()
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
+        label.text = "HEADER"
+        return label
+    }()
+    
 }
