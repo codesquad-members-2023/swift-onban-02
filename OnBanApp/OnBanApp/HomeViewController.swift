@@ -31,6 +31,10 @@ class HomeViewController: UIViewController {
         navigationBar.layer.shadowOpacity = 0.1
         navigationBar.layer.shadowRadius = 0.0
         view.addSubview(navigationBar)
+        
+        navigationBar.layer.masksToBounds = false
+        navigationBar.layer.shadowPath = UIBezierPath(rect: navigationBar.bounds).cgPath
+        
         // Navigation Bar Layout 설정
         NSLayoutConstraint.activate([
             navigationBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
