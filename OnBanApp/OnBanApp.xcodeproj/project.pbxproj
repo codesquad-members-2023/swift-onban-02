@@ -14,6 +14,8 @@
 		2AA8161329ED5A74006C6EF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA8161229ED5A74006C6EF9 /* Assets.xcassets */; };
 		2AA8161629ED5A74006C6EF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA8161429ED5A74006C6EF9 /* LaunchScreen.storyboard */; };
 		7C8A979E09672BA8D4ACA3C4 /* Pods_OnBanApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F2E13594C3A5D01FDDE1DA /* Pods_OnBanApp.framework */; };
+		E4614D7F29F6169B00A76AE2 /* FoodCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4614D7E29F6169B00A76AE2 /* FoodCardView.swift */; };
+		E4614D8129F61E9F00A76AE2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4614D8029F61E9F00A76AE2 /* HeaderView.swift */; };
 		E48651C729EFDAD700539390 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E48651C629EFDAD700539390 /* .swiftlint.yml */; };
 		E48651C929EFE05300539390 /* FoodCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48651C829EFE05300539390 /* FoodCategoryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,8 @@
 		83E35BE8827895D85F5880DB /* Pods-OnBanApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnBanApp.debug.xcconfig"; path = "Target Support Files/Pods-OnBanApp/Pods-OnBanApp.debug.xcconfig"; sourceTree = "<group>"; };
 		98F1600C4D5C280543FB3973 /* Pods-OnBanApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnBanApp.release.xcconfig"; path = "Target Support Files/Pods-OnBanApp/Pods-OnBanApp.release.xcconfig"; sourceTree = "<group>"; };
 		D4F2E13594C3A5D01FDDE1DA /* Pods_OnBanApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnBanApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4614D7E29F6169B00A76AE2 /* FoodCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardView.swift; sourceTree = "<group>"; };
+		E4614D8029F61E9F00A76AE2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E48651C629EFDAD700539390 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		E48651C829EFE05300539390 /* FoodCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +76,8 @@
 				2AA8160B29ED5A71006C6EF9 /* SceneDelegate.swift */,
 				2AA8160D29ED5A71006C6EF9 /* HomeViewController.swift */,
 				E48651C829EFE05300539390 /* FoodCategoryCollectionViewCell.swift */,
+				E4614D7E29F6169B00A76AE2 /* FoodCardView.swift */,
+				E4614D8029F61E9F00A76AE2 /* HeaderView.swift */,
 				2AA8160F29ED5A71006C6EF9 /* Main.storyboard */,
 				2AA8161229ED5A74006C6EF9 /* Assets.xcassets */,
 				2AA8161429ED5A74006C6EF9 /* LaunchScreen.storyboard */,
@@ -233,8 +239,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E48651C929EFE05300539390 /* FoodCategoryCollectionViewCell.swift in Sources */,
+				E4614D8129F61E9F00A76AE2 /* HeaderView.swift in Sources */,
 				2AA8160E29ED5A71006C6EF9 /* HomeViewController.swift in Sources */,
 				2AA8160A29ED5A71006C6EF9 /* AppDelegate.swift in Sources */,
+				E4614D7F29F6169B00A76AE2 /* FoodCardView.swift in Sources */,
 				2AA8160C29ED5A71006C6EF9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +396,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -417,6 +426,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
