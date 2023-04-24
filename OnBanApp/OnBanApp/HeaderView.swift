@@ -8,5 +8,11 @@
 import UIKit
 
 class HeaderView: UICollectionReusableView {
-
+    static let identifier = "Header"
+    
+    private let cellView: UIView = {
+        let cell = UIView()
+        cell.backgroundColor = .blue
+        return cell
+    }()
 }
