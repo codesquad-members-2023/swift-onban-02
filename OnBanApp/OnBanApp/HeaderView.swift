@@ -25,4 +25,23 @@ class HeaderView: UICollectionReusableView {
         return label
     }()
     
+    func setHeader() {
+        layoutSubviews()
+        addSubview(cellView)
+        cellView.addSubview(titleLabel)
+        
+        cellView.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            
+            cellView.widthAnchor.constraint(equalTo: self.widthAnchor),
+            cellView.heightAnchor.constraint(equalTo: self.heightAnchor),
+            cellView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            cellView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            
+            titleLabel.leadingAnchor.constraint(equalTo: cellView.leadingAnchor),
+            titleLabel.topAnchor.constraint(equalTo: cellView.topAnchor)
+        ])
+    }
+    
 }
