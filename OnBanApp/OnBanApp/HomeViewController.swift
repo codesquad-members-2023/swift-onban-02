@@ -6,13 +6,11 @@
 //
 
 import UIKit
-//TODO: flowlayout으로 변경
+
 class HomeViewController: UIViewController {
     let navigationBar = UINavigationBar()
     let collectionView: UICollectionView = {
-        let layout = HomeViewController.createCompositionLayout()
-        
-        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         return collection
     }()
     
