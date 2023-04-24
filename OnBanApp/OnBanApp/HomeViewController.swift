@@ -94,6 +94,10 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 8
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
     }
     
