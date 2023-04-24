@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+//TODO: flowlayout으로 변경
 class HomeViewController: UIViewController {
     let navigationBar = UINavigationBar()
     let collectionView: UICollectionView = {
@@ -61,9 +61,9 @@ class HomeViewController: UIViewController {
     // TODO: 여기 고정값들 바꿔. 그리고 변수명도 이상하다.
     static func createCompositionLayout() -> UICollectionViewCompositionalLayout {
         // sizeSetting
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.97))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .fractionalHeight(0.97))
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1264.0 / 852.0 ))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.25))
         //Item
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         //Group
@@ -90,7 +90,7 @@ extension HomeViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCategoryCollectionViewCell.identifier, for: indexPath) as? FoodCategoryCollectionViewCell else {
             exit(0)
         }
-        cell.configure(withTitle: "SECTION \(indexPath.row + 1)")
+        cell.configure(withTitle: "ITEM\(indexPath.row + 1)")
         return cell
     }
     
