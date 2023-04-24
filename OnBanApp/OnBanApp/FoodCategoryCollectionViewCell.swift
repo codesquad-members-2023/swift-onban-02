@@ -12,7 +12,7 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
     
     private let cellView: UIView = {
         let cell = UIView()
-        cell.backgroundColor = .cyan
+        cell.backgroundColor = .red
         return cell
     }()
     
@@ -27,6 +27,7 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(cellView)
+        print(contentView)
         cellView.addSubview(titleLabel)
         
         cellView.translatesAutoresizingMaskIntoConstraints = false
