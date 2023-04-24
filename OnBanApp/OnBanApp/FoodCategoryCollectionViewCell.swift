@@ -24,10 +24,8 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
         return label
     }()
         
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    func setCell() {
         contentView.addSubview(cellView)
-        print(contentView)
         cellView.addSubview(titleLabel)
         
         cellView.translatesAutoresizingMaskIntoConstraints = false
@@ -39,13 +37,9 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
             cellView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             cellView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
-            titleLabel.leadingAnchor.constraint(equalTo: cellView.leadingAnchor),
+            titleLabel.topAnchor.constraint(equalTo: cellView.topAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: cellView.leadingAnchor)]
         )
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
     }
 
     func configure(withTitle title: String) {
