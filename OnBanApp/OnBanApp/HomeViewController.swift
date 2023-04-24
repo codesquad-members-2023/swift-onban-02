@@ -105,6 +105,7 @@ extension HomeViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCategoryCollectionViewCell.identifier, for: indexPath) as? FoodCategoryCollectionViewCell else {
             return UICollectionViewCell()
         }
+        cell.setCell()
         cell.configure(withTitle: "ITEM\(indexPath.row + 1)")
         return cell
     }
