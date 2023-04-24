@@ -67,32 +67,17 @@ class HomeViewController: UIViewController {
         collectionView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         collectionView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         
-        collectionView.backgroundColor = .white
         collectionView.register(FoodCategoryCollectionViewCell.self, forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.identifier)
     }
-    // TODO: 여기 고정값들 바꿔. 그리고 변수명도 이상하다.
-    static func createCompositionLayout() -> UICollectionViewCompositionalLayout {
-        // sizeSetting
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .fractionalHeight(0.97))
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.25))
-        //Item
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        //Group
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 1)
-        
-        //Sections
-        let section = NSCollectionLayoutSection(group: group)
-        //Return
-        return UICollectionViewCompositionalLayout(section: section)
-    }
     
+}
+
 }
 
 extension HomeViewController: UICollectionViewDelegate {
     
-}
-
+    }
+    
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -100,7 +85,7 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCategoryCollectionViewCell.identifier, for: indexPath) as? FoodCategoryCollectionViewCell else {
-            exit(0)
+            return UICollectionViewCell()
         }
         cell.configure(withTitle: "ITEM\(indexPath.row + 1)")
         return cell
