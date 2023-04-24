@@ -58,4 +58,7 @@ class HeaderView: UICollectionReusableView {
         self.center.x = UIScreen.main.bounds.midX
     }
     
+    func configure(withTitle title: String) {
+        titleLabel.text = title
+    }
 }
