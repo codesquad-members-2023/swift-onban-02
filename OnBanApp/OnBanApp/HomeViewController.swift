@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
         setCollectionView()
         collectionView.dataSource = self
         collectionView.delegate = self
