@@ -44,4 +44,18 @@ class HeaderView: UICollectionReusableView {
         ])
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let width = UIScreen.main.bounds.width * 0.94
+        let height = width / 2.2
+        let size = CGSize(width: width, height: height)
+        let point = bounds.origin
+        
+        self.frame.size.width = width
+        self.frame.size.height = height
+        
+        self.center.x = UIScreen.main.bounds.midX
+    }
+    
 }
