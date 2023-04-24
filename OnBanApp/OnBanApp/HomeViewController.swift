@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCollectionView(collectionView: collectionView)
+        setCollectionView()
         collectionView.dataSource = self
         collectionView.delegate = self
         setNavigationBar()
@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
         navigationBar.items = [navigationItem]
     }
     
-    func setCollectionView(collectionView: UICollectionView) {
+    func setCollectionView() {
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
