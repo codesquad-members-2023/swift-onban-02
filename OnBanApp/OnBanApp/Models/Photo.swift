@@ -8,5 +8,5 @@
 import Foundation
 
 struct Photo {
-    
+    //데이터 받아오기
 }
