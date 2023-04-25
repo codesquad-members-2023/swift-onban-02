@@ -12,16 +12,17 @@ class HeaderView: UICollectionReusableView {
     
     private let cellView: UIView = {
         let cell = UIView()
-        cell.backgroundColor = .blue
+        cell.backgroundColor = .systemBackground
         return cell
     }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
+        label.preferredMaxLayoutWidth = UIScreen.main.bounds.width * 0.6
         label.textColor = .black
-        label.textAlignment = .left
+        label.textAlignment = .natural
         label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
-        label.text = "HEADER"
         return label
     }()
     
@@ -46,9 +47,8 @@ class HeaderView: UICollectionReusableView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         let width = UIScreen.main.bounds.width * 0.94
-        let height = width / 2.2
+        let height = width * 96/343
         let size = CGSize(width: width, height: height)
         let point = bounds.origin
         

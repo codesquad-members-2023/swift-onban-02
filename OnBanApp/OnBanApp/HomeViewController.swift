@@ -83,11 +83,12 @@ extension HomeViewController: UICollectionViewDelegate {
 extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerData = HeaderData()
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderView.identifier, for: indexPath) as! HeaderView
             headerView.setHeader()
-            headerView.configure(withTitle: "HEADER \(indexPath.section + 1)")
+            headerView.configure(withTitle: headerData.title[indexPath.section])
             return headerView
         default:
             return UICollectionReusableView()
@@ -120,7 +121,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let width = view.frame.width
-        let height = width / 2.2
+        let height = width * 96 / 343
         return CGSize(width: width, height: height)
     }
 }
