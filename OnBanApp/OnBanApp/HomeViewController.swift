@@ -189,6 +189,47 @@ class HomeViewController: UIViewController {
             explanation.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 1/4)
         ])
     }
+
+    func setTag(outerstackView: UIStackView, card: FoodCardViewComponents) {
+        let tag = card.tag
+        let innerStackView = UIStackView()
+        
+        innerStackView.axis = .horizontal
+        innerStackView.distribution = .fillProportionally
+        innerStackView.spacing = 9
+        outerstackView.insertArrangedSubview(innerStackView, at: 2)
+        
+        innerStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            innerStackView.trailingAnchor.constraint(equalTo: outerstackView.trailingAnchor),
+            innerStackView.widthAnchor.constraint(equalTo: outerstackView.widthAnchor, multiplier: 155/200 ),
+            innerStackView.heightAnchor.constraint(equalTo: outerstackView.heightAnchor, multiplier: 1/4)
+        ])
+        
+        for index in 0 ..< tag.count {
+            
+            innerStackView.insertArrangedSubview(tag[index], at: index)
+            tag[index].translatesAutoresizingMaskIntoConstraints = false
+            
+            if index == 0 {
+                NSLayoutConstraint.activate([
+                    tag[index].widthAnchor.constraint(equalTo: outerstackView.widthAnchor, multiplier: 44/210),
+                    tag[index].heightAnchor.constraint(equalTo: innerStackView.heightAnchor)
+                ])
+            } else if index == 1 {
+                NSLayoutConstraint.activate([
+                    tag[index].widthAnchor.constraint(equalTo: outerstackView.widthAnchor, multiplier: 43/210),
+                    tag[index].heightAnchor.constraint(equalTo: innerStackView.heightAnchor)
+                ])
+            } else {
+                NSLayoutConstraint.activate([
+                    tag[index].widthAnchor.constraint(equalTo: outerstackView.widthAnchor, multiplier: 60/210),
+                    tag[index].heightAnchor.constraint(equalTo: innerStackView.heightAnchor)
+                ])
+            }
+        }
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate {
