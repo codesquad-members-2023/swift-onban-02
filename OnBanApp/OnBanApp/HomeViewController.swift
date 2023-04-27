@@ -139,6 +139,35 @@ class HomeViewController: UIViewController {
         outer.insertArrangedSubview(inner, at: 2)
     }
     
+    func setInnerStackViewConstraints(inner: UIStackView, outer: UIStackView, price: [UILabel]) {
+        
+        inner.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            inner.trailingAnchor.constraint(equalTo: outer.trailingAnchor),
+            inner.widthAnchor.constraint(equalTo: outer.widthAnchor, multiplier: 0.8),
+            inner.heightAnchor.constraint(equalTo: outer.heightAnchor, multiplier: 1/4)
+        ])
+        
+        for index in 0 ..< price.count {
+            
+            inner.insertArrangedSubview(price[index], at: index)
+            price[index].translatesAutoresizingMaskIntoConstraints = false
+            
+            if index == 0 {
+                NSLayoutConstraint.activate([
+                    price[index].leadingAnchor.constraint(equalTo: inner.leadingAnchor),
+                    price[index].widthAnchor.constraint(equalTo: outer.widthAnchor, multiplier: 0.4),
+                    price[index].heightAnchor.constraint(equalTo: inner.heightAnchor)
+                ])
+            } else {
+                NSLayoutConstraint.activate([
+                    price[index].widthAnchor.constraint(equalTo: outer.widthAnchor, multiplier: 0.4),
+                    price[index].heightAnchor.constraint(equalTo: inner.heightAnchor)
+                ])
+            }
+        }
+    }
+    
     func setLabel(stackView: UIStackView, card: FoodCardViewComponents) {
         let title = card.title
         stackView.insertArrangedSubview(title, at: 0)
