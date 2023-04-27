@@ -94,7 +94,9 @@ extension HomeViewController: UICollectionViewDataSource {
         let headerData = HeaderData()
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderView.identifier, for: indexPath) as! HeaderView
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderView.identifier, for: indexPath) as? HeaderView else {
+                return UICollectionReusableView()
+            }
             headerView.setHeader()
             headerView.configure(withTitle: headerData.title[indexPath.section])
             return headerView
@@ -119,7 +121,6 @@ extension HomeViewController: UICollectionViewDataSource {
         setFoodCardView(cell: cell)
         return cell
     }
-    
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
