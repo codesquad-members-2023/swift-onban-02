@@ -30,4 +30,28 @@ struct FoodCardViewComponents {
         explanation.textColor = .lightGray
         return explanation
     }()
+    
+    private(set) var price: [UILabel] = {
+        let originalPrice = UILabel()
+        let discountedPrice: UILabel? = UILabel()
+        
+        originalPrice.text = "15,800원"
+        originalPrice.font = UIFont.systemFont(ofSize: UIScreen.main.bounds.height*(8/375), weight: .medium)
+        originalPrice.textColor = .lightGray
+        let attributedString = NSMutableAttributedString(string: originalPrice.text ?? "")
+        attributedString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributedString.length))
+        originalPrice.attributedText = attributedString
+        
+        guard let discountedPrice = discountedPrice else {
+            let price: [UILabel] = [originalPrice]
+            return price
+        }
+        discountedPrice.text = "12,640원"
+        discountedPrice.font = UIFont.systemFont(ofSize: UIScreen.main.bounds.height*(8/375), weight: .bold)
+        discountedPrice.textColor = .black
+        
+        let price: [UILabel] = [discountedPrice, originalPrice]
+        
+        return price
+    }()
 }
