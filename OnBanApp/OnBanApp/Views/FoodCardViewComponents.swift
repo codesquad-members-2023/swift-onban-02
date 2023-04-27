@@ -20,4 +20,14 @@ struct FoodCardViewComponents {
         title.font = UIFont.systemFont(ofSize: UIScreen.main.bounds.height*(8/375), weight: .bold)
         return title
     }()
+    
+    private(set) var explanation: UILabel = {
+        let explanation = UILabel()
+        explanation.textRect(forBounds: CGRect(), limitedToNumberOfLines: 1)
+        explanation.text = "제 이름은 홍길동입니다."
+        explanation.textAlignment = .left
+        explanation.font = UIFont.systemFont(ofSize: UIScreen.main.bounds.height*(8/375), weight: .medium)
+        explanation.textColor = .lightGray
+        return explanation
+    }()
 }
