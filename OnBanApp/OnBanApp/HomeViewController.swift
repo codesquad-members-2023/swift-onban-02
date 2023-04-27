@@ -28,29 +28,33 @@ class HomeViewController: UIViewController {
         setNavigationBarConstraints()
     }
     
-    func setNavigationBar() {
-        navigationBar.translatesAutoresizingMaskIntoConstraints = false
-        
+    func setCollectionView() {
+        setCollectionViewLayoutItemSize()
+    
+    func setNavigationBarAppearance() {
         navigationBar.backgroundColor = .white
         navigationBar.isTranslucent = false
         navigationBar.layer.shadowOffset = CGSize(width: 0, height: 1.0)
         navigationBar.layer.shadowOpacity = 0.1
         navigationBar.layer.shadowRadius = 0.0
-        view.addSubview(navigationBar)
         navigationBar.layer.masksToBounds = false
         navigationBar.layer.shadowPath = UIBezierPath(rect: navigationBar.bounds).cgPath
         
-        // Navigation Bar Layout 설정
+        let navigationItem = UINavigationItem()
+        navigationItem.title = "오늘찬"
+        navigationBar.items = [navigationItem]
+    }
+    
+    func setNavigationBarConstraints() {
+        view.addSubview(navigationBar)
+        
+        navigationBar.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             navigationBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             navigationBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             navigationBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             navigationBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40.0)
         ])
-        // Navigation Item 생성
-        let navigationItem = UINavigationItem()
-        navigationItem.title = "오늘찬"
-        navigationBar.items = [navigationItem]
     }
     
     func setCollectionViewLayoutItemSize() {
