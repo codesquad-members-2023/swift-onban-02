@@ -30,6 +30,9 @@ class HomeViewController: UIViewController {
     
     func setCollectionView() {
         setCollectionViewLayoutItemSize()
+        setCollectionViewConstraints()
+        registerCollectionViewCell()
+    }
     
     func setNavigationBarAppearance() {
         navigationBar.backgroundColor = .white
