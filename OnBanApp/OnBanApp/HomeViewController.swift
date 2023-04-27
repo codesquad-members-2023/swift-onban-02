@@ -116,7 +116,7 @@ extension HomeViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         cell.setCell()
-        cell.configure(withTitle: "ITEM\(indexPath.row + 1)")
+        setFoodCardView(cell: cell)
         return cell
     }
     
