@@ -20,15 +20,13 @@ class HomeViewController: UIViewController {
         setCollectionView()
         collectionView.dataSource = self
         collectionView.delegate = self
+        setCollectionView()
         setNavigationBar()
     }
     
     func setCollectionViewLayoutItemSize() {
         let layout = UICollectionViewFlowLayout()
         let width = UIScreen.main.bounds.width * 0.94
-        let height = width / 2.2
-        layout.itemSize = CGSize(width: width, height: height)
-        collectionView.setCollectionViewLayout(layout, animated: false)
     }
     
     func setNavigationBar() {
@@ -40,7 +38,6 @@ class HomeViewController: UIViewController {
         navigationBar.layer.shadowOpacity = 0.1
         navigationBar.layer.shadowRadius = 0.0
         view.addSubview(navigationBar)
-        
         navigationBar.layer.masksToBounds = false
         navigationBar.layer.shadowPath = UIBezierPath(rect: navigationBar.bounds).cgPath
         
@@ -57,7 +54,14 @@ class HomeViewController: UIViewController {
         navigationBar.items = [navigationItem]
     }
     
-    func setCollectionView() {
+    func setCollectionViewLayoutItemSize() {
+        let layout = UICollectionViewFlowLayout()
+        let width = UIScreen.main.bounds.width * 0.94
+        let height = width / 2.2
+        layout.itemSize = CGSize(width: width, height: height)
+        collectionView.setCollectionViewLayout(layout, animated: false)
+    }
+    
         view.addSubview(collectionView)
         setCollectionViewLayoutItemSize()
         
