@@ -8,5 +8,7 @@
 import UIKit
 
 struct FoodCardViewComponents {
-    
+    private(set) var photo: UIImageView = {
+        return UIImageView(image: UIImage(named: "abcd.jpeg"))
+    }()
 }
