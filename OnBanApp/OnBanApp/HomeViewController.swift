@@ -17,16 +17,15 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        setCollectionView()
         collectionView.dataSource = self
         collectionView.delegate = self
         setCollectionView()
         setNavigationBar()
     }
     
-    func setCollectionViewLayoutItemSize() {
-        let layout = UICollectionViewFlowLayout()
-        let width = UIScreen.main.bounds.width * 0.94
+    func setNavigationBar() {
+        setNavigationBarAppearance()
+        setNavigationBarConstraints()
     }
     
     func setNavigationBar() {
@@ -62,18 +61,19 @@ class HomeViewController: UIViewController {
         collectionView.setCollectionViewLayout(layout, animated: false)
     }
     
+    func setCollectionViewConstraints() {
         view.addSubview(collectionView)
-        setCollectionViewLayoutItemSize()
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 64.0),
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             collectionView.leftAnchor.constraint(equalTo: view.leftAnchor)
         ])
-        
+    }
+    
+    func registerCollectionViewCell() {
         collectionView.register(FoodCategoryCollectionViewCell.self, forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.identifier)
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.identifier)
     }
