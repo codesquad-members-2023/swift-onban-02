@@ -37,6 +37,17 @@ class HomeViewController: UIViewController {
     func setFoodCardView(cell: FoodCategoryCollectionViewCell) {
         let card = FoodCardViewComponents()
         setPhotoViewConstraints(cell: cell, card: card)
+        setStackView(cell: cell, card: card)
+    }
+    
+    func setStackView(cell: FoodCategoryCollectionViewCell, card: FoodCardViewComponents) {
+        let outerStackView = UIStackView()
+        outerStackView.axis = .vertical
+        setLabel(stackView: outerStackView, card: card)
+        setTag(outerstackView: outerStackView, card: card)
+        setOuterStackViewConstraints(outerStackView: outerStackView, cell: cell)
+    }
+    
     func setNavigationBarAppearance() {
         navigationBar.backgroundColor = .white
         navigationBar.isTranslucent = false
@@ -86,6 +97,18 @@ class HomeViewController: UIViewController {
     func registerCollectionViewCell() {
         collectionView.register(FoodCategoryCollectionViewCell.self, forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.identifier)
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.identifier)
+    }
+
+    func setOuterStackViewConstraints(outerStackView: UIStackView, cell: FoodCategoryCollectionViewCell) {
+        cell.addSubview(outerStackView)
+        outerStackView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            outerStackView.trailingAnchor.constraint(equalTo: cell.trailingAnchor),
+            outerStackView.widthAnchor.constraint(equalTo: cell.widthAnchor, multiplier: 205/343),
+            outerStackView.heightAnchor.constraint(equalTo: cell.heightAnchor, multiplier: 96/130),
+
+            outerStackView.centerYAnchor.constraint(equalTo: cell.centerYAnchor)
+        ])
     }
     
     func setPhotoViewConstraints(cell: FoodCategoryCollectionViewCell, card: FoodCardViewComponents ) {
