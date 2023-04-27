@@ -34,6 +34,9 @@ class HomeViewController: UIViewController {
         registerCollectionViewCell()
     }
     
+    func setFoodCardView(cell: FoodCategoryCollectionViewCell) {
+        let card = FoodCardViewComponents()
+        setPhotoViewConstraints(cell: cell, card: card)
     func setNavigationBarAppearance() {
         navigationBar.backgroundColor = .white
         navigationBar.isTranslucent = false
@@ -83,6 +86,19 @@ class HomeViewController: UIViewController {
     func registerCollectionViewCell() {
         collectionView.register(FoodCategoryCollectionViewCell.self, forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.identifier)
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.identifier)
+    }
+    
+    func setPhotoViewConstraints(cell: FoodCategoryCollectionViewCell, card: FoodCardViewComponents ) {
+        let photo = card.photo
+        cell.addSubview(photo)
+        photo.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            photo.leadingAnchor.constraint(equalTo: cell.leadingAnchor),
+            photo.widthAnchor.constraint(equalTo: cell.widthAnchor, multiplier: 130/343),
+            photo.topAnchor.constraint(equalTo: cell.topAnchor),
+            photo.bottomAnchor.constraint(equalTo: cell.bottomAnchor)
+        ])
     }
     
 }
