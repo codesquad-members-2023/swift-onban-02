@@ -46,6 +46,7 @@ class HomeViewController: UIViewController {
         setLabel(stackView: outerStackView, card: card)
         setTag(outerstackView: outerStackView, card: card)
         setOuterStackViewConstraints(outerStackView: outerStackView, cell: cell)
+        setInnerStackView(outerstackView: outerStackView, card: card)
     }
     
     func setNavigationBarAppearance() {
@@ -122,6 +123,20 @@ class HomeViewController: UIViewController {
             photo.topAnchor.constraint(equalTo: cell.topAnchor),
             photo.bottomAnchor.constraint(equalTo: cell.bottomAnchor)
         ])
+    }
+    
+    func setInnerStackView(outerstackView: UIStackView, card: FoodCardViewComponents) {
+        let price = card.price
+        let innerStackView = UIStackView()
+        setInnerStackViewAppearance(inner: innerStackView, outer: outerstackView)
+        setInnerStackViewConstraints(inner: innerStackView, outer: outerstackView, price: price)
+    }
+    
+    func setInnerStackViewAppearance(inner: UIStackView, outer: UIStackView) {
+        inner.axis = .horizontal
+        inner.distribution = .fill
+        inner.spacing = 8
+        outer.insertArrangedSubview(inner, at: 2)
     }
     
     func setLabel(stackView: UIStackView, card: FoodCardViewComponents) {
