@@ -124,6 +124,27 @@ class HomeViewController: UIViewController {
         ])
     }
     
+    func setLabel(stackView: UIStackView, card: FoodCardViewComponents) {
+        let title = card.title
+        stackView.insertArrangedSubview(title, at: 0)
+        
+        title.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            title.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+            title.widthAnchor.constraint(equalTo: stackView.widthAnchor),
+            title.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 1/4)
+        ])
+        
+        let explanation = card.explanation
+        stackView.insertArrangedSubview(explanation, at: 1)
+
+        explanation.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            explanation.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+            explanation.widthAnchor.constraint(equalTo: stackView.widthAnchor),
+            explanation.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 1/4)
+        ])
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate {
