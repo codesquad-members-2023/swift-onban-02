@@ -18,11 +18,13 @@ class HeaderView: UICollectionReusableView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
+        let proportion = 32.0 / 393.0
+        print(UIScreen.main.bounds.width)
         label.numberOfLines = 0
         label.preferredMaxLayoutWidth = UIScreen.main.bounds.width * 0.6
         label.textColor = .black
         label.textAlignment = .natural
-        label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: proportion * UIScreen.main.bounds.width, weight: .medium)
         return label
     }()
     
