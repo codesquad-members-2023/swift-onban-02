@@ -54,4 +54,43 @@ struct FoodCardViewComponents {
         
         return price
     }()
+    
+    private(set) var tag: [UILabel] = {
+        let orange: UILabel = {
+            let label = UILabel()
+            label.text = "BEST"
+            label.textAlignment = .center
+            label.textColor = .white
+            label.backgroundColor = UIColor(red: 0.992, green: 0.587, blue: 0.112, alpha: 1.0)
+            label.font = UIFont.systemFont(ofSize: UIScreen.main.bounds.height*(5/375), weight: .bold)
+            label.clipsToBounds = true
+            label.layer.cornerRadius = 15
+            return label
+        }()
+        
+        let yellow: UILabel = {
+            let label = UILabel()
+            label.text = "NEW"
+            label.textAlignment = .center
+            label.textColor = .white
+            label.backgroundColor = UIColor(red: 1.0, green: 0.741, blue: 0.075, alpha: 1.0)
+            label.font = UIFont.systemFont(ofSize: UIScreen.main.bounds.height*(5/375), weight: .bold)
+            label.clipsToBounds = true
+            label.layer.cornerRadius = 15
+            return label
+        }()
+        
+        let blue: UILabel = {
+            let label = UILabel()
+            label.text = ""
+            label.textAlignment = .center
+            label.textColor = .white
+            label.backgroundColor = UIColor(red: 0.0, green: 0.478, blue: 1, alpha: 1.0)
+            label.font = UIFont.systemFont(ofSize: UIScreen.main.bounds.height*(5/375), weight: .bold)
+            label.clipsToBounds = true
+            label.layer.cornerRadius = 15
+            return label
+        }()
+        return [orange, yellow, blue, UILabel()]
+    }()
 }
