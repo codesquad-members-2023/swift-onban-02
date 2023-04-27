@@ -23,6 +23,7 @@
 		E499E95D29F7748000F81C4A /* Explanation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E95C29F7748000F81C4A /* Explanation.swift */; };
 		E499E95F29F7749A00F81C4A /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E95E29F7749A00F81C4A /* Price.swift */; };
 		E499E96129F774A100F81C4A /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E96029F774A100F81C4A /* Tag.swift */; };
+		E499E96429F776E400F81C4A /* FoodCardViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E96329F776E400F81C4A /* FoodCardViewComponents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		E499E95C29F7748000F81C4A /* Explanation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explanation.swift; sourceTree = "<group>"; };
 		E499E95E29F7749A00F81C4A /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		E499E96029F774A100F81C4A /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		E499E96329F776E400F81C4A /* FoodCardViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardViewComponents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,8 @@
 				2AA8161229ED5A74006C6EF9 /* Assets.xcassets */,
 				2AA8161429ED5A74006C6EF9 /* LaunchScreen.storyboard */,
 				2AA8161729ED5A74006C6EF9 /* Info.plist */,
-				E499E95529F7722A00F81C4A /* Model */,
+				E499E96229F7763400F81C4A /* Views */,
+				E499E95529F7722A00F81C4A /* Models */,
 			);
 			path = OnBanApp;
 			sourceTree = "<group>";
@@ -113,7 +116,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E499E95529F7722A00F81C4A /* Model */ = {
+		E499E95529F7722A00F81C4A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				E499E95329F7722200F81C4A /* FoodCard.swift */,
@@ -123,7 +126,15 @@
 				E499E95E29F7749A00F81C4A /* Price.swift */,
 				E499E96029F774A100F81C4A /* Tag.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E499E96229F7763400F81C4A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E499E96329F776E400F81C4A /* FoodCardViewComponents.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E499E96129F774A100F81C4A /* Tag.swift in Sources */,
+				E499E96429F776E400F81C4A /* FoodCardViewComponents.swift in Sources */,
 				E499E95729F7744300F81C4A /* Photo.swift in Sources */,
 				E499E95D29F7748000F81C4A /* Explanation.swift in Sources */,
 				E499E95929F7745600F81C4A /* Title.swift in Sources */,
@@ -411,6 +423,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B3PWYBKFUK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OnBanApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -424,7 +437,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Aiden.OnBanApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.codesquad.onban-02";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -440,6 +453,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B3PWYBKFUK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OnBanApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -453,7 +467,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Aiden.OnBanApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.codesquad.onban-02";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
