@@ -10,12 +10,6 @@ import UIKit
 class FoodCategoryCollectionViewCell: UICollectionViewCell {
     static let identifier = "CategoryCell"
     
-    private let cellView: UIView = {
-        let cell = UIView()
-        cell.backgroundColor = .white
-        return cell
-    }()
-    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
@@ -25,19 +19,19 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
     }()
         
     func setCell() {
-        contentView.addSubview(cellView)
-        cellView.addSubview(titleLabel)
-        cellView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.backgroundColor = .white
+        contentView.addSubview(titleLabel)
+        contentView.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate(
-            [cellView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            cellView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            cellView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            cellView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            [contentView.topAnchor.constraint(equalTo: self.topAnchor),
+             contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+             contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+             contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-            titleLabel.topAnchor.constraint(equalTo: cellView.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: cellView.leadingAnchor)]
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor)]
         )
     }
 
