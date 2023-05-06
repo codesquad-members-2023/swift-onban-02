@@ -34,21 +34,6 @@ class HomeViewController: UIViewController {
         registerCollectionViewCell()
     }
     
-    func setFoodCardView(cell: FoodCategoryCollectionViewCell) {
-        let card = FoodCardViewComponents()
-        setPhotoViewConstraints(cell: cell, card: card)
-        setStackView(cell: cell, card: card)
-    }
-    
-    func setStackView(cell: FoodCategoryCollectionViewCell, card: FoodCardViewComponents) {
-        let outerStackView = UIStackView()
-        outerStackView.axis = .vertical
-        setLabel(stackView: outerStackView, card: card)
-        setTag(outerstackView: outerStackView, card: card)
-        setOuterStackViewConstraints(outerStackView: outerStackView, cell: cell)
-        setInnerStackView(outerstackView: outerStackView, card: card)
-    }
-    
     func setNavigationBarAppearance() {
         navigationBar.backgroundColor = .white
         navigationBar.isTranslucent = false
@@ -99,137 +84,7 @@ class HomeViewController: UIViewController {
         collectionView.register(FoodCategoryCollectionViewCell.self, forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.identifier)
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.identifier)
     }
-
-    func setOuterStackViewConstraints(outerStackView: UIStackView, cell: FoodCategoryCollectionViewCell) {
-        cell.addSubview(outerStackView)
-        outerStackView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            outerStackView.trailingAnchor.constraint(equalTo: cell.trailingAnchor),
-            outerStackView.widthAnchor.constraint(equalTo: cell.widthAnchor, multiplier: 205/343),
-            outerStackView.heightAnchor.constraint(equalTo: cell.heightAnchor, multiplier: 96/130),
-
-            outerStackView.centerYAnchor.constraint(equalTo: cell.centerYAnchor)
-        ])
-    }
     
-    func setPhotoViewConstraints(cell: FoodCategoryCollectionViewCell, card: FoodCardViewComponents ) {
-        let photo = card.photo
-        cell.addSubview(photo)
-        photo.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            photo.leadingAnchor.constraint(equalTo: cell.leadingAnchor),
-            photo.widthAnchor.constraint(equalTo: cell.widthAnchor, multiplier: 130/343),
-            photo.topAnchor.constraint(equalTo: cell.topAnchor),
-            photo.bottomAnchor.constraint(equalTo: cell.bottomAnchor)
-        ])
-    }
-    
-    func setInnerStackView(outerstackView: UIStackView, card: FoodCardViewComponents) {
-        let price = card.price
-        let innerStackView = UIStackView()
-        setInnerStackViewAppearance(inner: innerStackView, outer: outerstackView)
-        setInnerStackViewConstraints(inner: innerStackView, outer: outerstackView, price: price)
-    }
-    
-    func setInnerStackViewAppearance(inner: UIStackView, outer: UIStackView) {
-        inner.axis = .horizontal
-        inner.distribution = .fill
-        inner.spacing = 8
-        outer.insertArrangedSubview(inner, at: 2)
-    }
-    
-    func setInnerStackViewConstraints(inner: UIStackView, outer: UIStackView, price: [UILabel]) {
-        
-        inner.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            inner.trailingAnchor.constraint(equalTo: outer.trailingAnchor),
-            inner.widthAnchor.constraint(equalTo: outer.widthAnchor, multiplier: 0.8),
-            inner.heightAnchor.constraint(equalTo: outer.heightAnchor, multiplier: 1/4)
-        ])
-        
-        for index in 0 ..< price.count {
-            
-            inner.insertArrangedSubview(price[index], at: index)
-            price[index].translatesAutoresizingMaskIntoConstraints = false
-            
-            if index == 0 {
-                NSLayoutConstraint.activate([
-                    price[index].leadingAnchor.constraint(equalTo: inner.leadingAnchor),
-                    price[index].widthAnchor.constraint(equalTo: outer.widthAnchor, multiplier: 0.4),
-                    price[index].heightAnchor.constraint(equalTo: inner.heightAnchor)
-                ])
-            } else {
-                NSLayoutConstraint.activate([
-                    price[index].widthAnchor.constraint(equalTo: outer.widthAnchor, multiplier: 0.4),
-                    price[index].heightAnchor.constraint(equalTo: inner.heightAnchor)
-                ])
-            }
-        }
-    }
-    
-    func setLabel(stackView: UIStackView, card: FoodCardViewComponents) {
-        let title = card.title
-        stackView.insertArrangedSubview(title, at: 0)
-        
-        title.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            title.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
-            title.widthAnchor.constraint(equalTo: stackView.widthAnchor),
-            title.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 1/4)
-        ])
-        
-        let explanation = card.explanation
-        stackView.insertArrangedSubview(explanation, at: 1)
-
-        explanation.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            explanation.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
-            explanation.widthAnchor.constraint(equalTo: stackView.widthAnchor),
-            explanation.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 1/4)
-        ])
-    }
-
-    func setTag(outerstackView: UIStackView, card: FoodCardViewComponents) {
-        let tag = card.tag
-        let innerStackView = UIStackView()
-        
-        innerStackView.axis = .horizontal
-        innerStackView.distribution = .fillProportionally
-        innerStackView.spacing = 9
-        outerstackView.insertArrangedSubview(innerStackView, at: 2)
-        
-        innerStackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            innerStackView.trailingAnchor.constraint(equalTo: outerstackView.trailingAnchor),
-            innerStackView.widthAnchor.constraint(equalTo: outerstackView.widthAnchor, multiplier: 155/200 ),
-            innerStackView.heightAnchor.constraint(equalTo: outerstackView.heightAnchor, multiplier: 1/4)
-        ])
-        
-        for index in 0 ..< tag.count {
-            
-            innerStackView.insertArrangedSubview(tag[index], at: index)
-            tag[index].translatesAutoresizingMaskIntoConstraints = false
-            
-            if index == 0 {
-                NSLayoutConstraint.activate([
-                    tag[index].widthAnchor.constraint(equalTo: outerstackView.widthAnchor, multiplier: 44/210),
-                    tag[index].heightAnchor.constraint(equalTo: innerStackView.heightAnchor)
-                ])
-            } else if index == 1 {
-                NSLayoutConstraint.activate([
-                    tag[index].widthAnchor.constraint(equalTo: outerstackView.widthAnchor, multiplier: 43/210),
-                    tag[index].heightAnchor.constraint(equalTo: innerStackView.heightAnchor)
-                ])
-            } else {
-                NSLayoutConstraint.activate([
-                    tag[index].widthAnchor.constraint(equalTo: outerstackView.widthAnchor, multiplier: 60/210),
-                    tag[index].heightAnchor.constraint(equalTo: innerStackView.heightAnchor)
-                ])
-            }
-        }
-    }
 }
 
 extension HomeViewController: UICollectionViewDelegate {
@@ -266,7 +121,6 @@ extension HomeViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         cell.setCell()
-        setFoodCardView(cell: cell)
         return cell
     }
 }
