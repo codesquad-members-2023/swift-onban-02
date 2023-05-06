@@ -14,6 +14,17 @@
 		2AA8161629ED5A74006C6EF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA8161429ED5A74006C6EF9 /* LaunchScreen.storyboard */; };
 		7C8A979E09672BA8D4ACA3C4 /* Pods_OnBanApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F2E13594C3A5D01FDDE1DA /* Pods_OnBanApp.framework */; };
 		E4614D8129F61E9F00A76AE2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4614D8029F61E9F00A76AE2 /* HeaderView.swift */; };
+		E48278122A0617C400E91FA3 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278112A0617C400E91FA3 /* PhotoView.swift */; };
+		E48278142A06235400E91FA3 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278132A06235400E91FA3 /* TitleView.swift */; };
+		E48278162A062FB700E91FA3 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278152A062FB700E91FA3 /* DescriptionView.swift */; };
+		E48278182A06382000E91FA3 /* PriceInnerStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278172A06382000E91FA3 /* PriceInnerStackView.swift */; };
+		E482781A2A06388000E91FA3 /* OuterStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278192A06388000E91FA3 /* OuterStackView.swift */; };
+		E482781E2A06456200E91FA3 /* SPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E482781D2A06456200E91FA3 /* SPriceView.swift */; };
+		E48278202A064A7C00E91FA3 /* NPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E482781F2A064A7C00E91FA3 /* NPriceView.swift */; };
+		E48278222A064B3E00E91FA3 /* BadgeInnerStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278212A064B3E00E91FA3 /* BadgeInnerStackView.swift */; };
+		E48278242A064B9D00E91FA3 /* OrangeBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278232A064B9D00E91FA3 /* OrangeBadgeView.swift */; };
+		E48278262A064D8000E91FA3 /* YellowBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278252A064D8000E91FA3 /* YellowBadgeView.swift */; };
+		E48278282A064DCB00E91FA3 /* BlueBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278272A064DCB00E91FA3 /* BlueBadgeView.swift */; };
 		E48651C729EFDAD700539390 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E48651C629EFDAD700539390 /* .swiftlint.yml */; };
 		E48651C929EFE05300539390 /* FoodCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48651C829EFE05300539390 /* FoodCategoryCollectionViewCell.swift */; };
 		E499E95229F7620B00F81C4A /* HeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E95129F7620B00F81C4A /* HeaderData.swift */; };
@@ -23,7 +34,6 @@
 		E499E95D29F7748000F81C4A /* Explanation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E95C29F7748000F81C4A /* Explanation.swift */; };
 		E499E95F29F7749A00F81C4A /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E95E29F7749A00F81C4A /* Price.swift */; };
 		E499E96129F774A100F81C4A /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E96029F774A100F81C4A /* Tag.swift */; };
-		E499E96429F776E400F81C4A /* FoodCardViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E96329F776E400F81C4A /* FoodCardViewComponents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +48,17 @@
 		98F1600C4D5C280543FB3973 /* Pods-OnBanApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnBanApp.release.xcconfig"; path = "Target Support Files/Pods-OnBanApp/Pods-OnBanApp.release.xcconfig"; sourceTree = "<group>"; };
 		D4F2E13594C3A5D01FDDE1DA /* Pods_OnBanApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnBanApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4614D8029F61E9F00A76AE2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		E48278112A0617C400E91FA3 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		E48278132A06235400E91FA3 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		E48278152A062FB700E91FA3 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		E48278172A06382000E91FA3 /* PriceInnerStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceInnerStackView.swift; sourceTree = "<group>"; };
+		E48278192A06388000E91FA3 /* OuterStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterStackView.swift; sourceTree = "<group>"; };
+		E482781D2A06456200E91FA3 /* SPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPriceView.swift; sourceTree = "<group>"; };
+		E482781F2A064A7C00E91FA3 /* NPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPriceView.swift; sourceTree = "<group>"; };
+		E48278212A064B3E00E91FA3 /* BadgeInnerStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeInnerStackView.swift; sourceTree = "<group>"; };
+		E48278232A064B9D00E91FA3 /* OrangeBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeBadgeView.swift; sourceTree = "<group>"; };
+		E48278252A064D8000E91FA3 /* YellowBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowBadgeView.swift; sourceTree = "<group>"; };
+		E48278272A064DCB00E91FA3 /* BlueBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueBadgeView.swift; sourceTree = "<group>"; };
 		E48651C629EFDAD700539390 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		E48651C829EFE05300539390 /* FoodCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		E499E95129F7620B00F81C4A /* HeaderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderData.swift; sourceTree = "<group>"; };
@@ -47,7 +68,6 @@
 		E499E95C29F7748000F81C4A /* Explanation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explanation.swift; sourceTree = "<group>"; };
 		E499E95E29F7749A00F81C4A /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		E499E96029F774A100F81C4A /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
-		E499E96329F776E400F81C4A /* FoodCardViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardViewComponents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +108,6 @@
 				2AA8160B29ED5A71006C6EF9 /* SceneDelegate.swift */,
 				2AA8160D29ED5A71006C6EF9 /* HomeViewController.swift */,
 				E499E95129F7620B00F81C4A /* HeaderData.swift */,
-				E4614D8029F61E9F00A76AE2 /* HeaderView.swift */,
-				E48651C829EFE05300539390 /* FoodCategoryCollectionViewCell.swift */,
 				2AA8161229ED5A74006C6EF9 /* Assets.xcassets */,
 				2AA8161429ED5A74006C6EF9 /* LaunchScreen.storyboard */,
 				2AA8161729ED5A74006C6EF9 /* Info.plist */,
@@ -132,7 +150,19 @@
 		E499E96229F7763400F81C4A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E499E96329F776E400F81C4A /* FoodCardViewComponents.swift */,
+				E4614D8029F61E9F00A76AE2 /* HeaderView.swift */,
+				E48651C829EFE05300539390 /* FoodCategoryCollectionViewCell.swift */,
+				E48278112A0617C400E91FA3 /* PhotoView.swift */,
+				E48278132A06235400E91FA3 /* TitleView.swift */,
+				E48278152A062FB700E91FA3 /* DescriptionView.swift */,
+				E48278192A06388000E91FA3 /* OuterStackView.swift */,
+				E48278172A06382000E91FA3 /* PriceInnerStackView.swift */,
+				E482781D2A06456200E91FA3 /* SPriceView.swift */,
+				E482781F2A064A7C00E91FA3 /* NPriceView.swift */,
+				E48278212A064B3E00E91FA3 /* BadgeInnerStackView.swift */,
+				E48278232A064B9D00E91FA3 /* OrangeBadgeView.swift */,
+				E48278252A064D8000E91FA3 /* YellowBadgeView.swift */,
+				E48278272A064DCB00E91FA3 /* BlueBadgeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,19 +301,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48278182A06382000E91FA3 /* PriceInnerStackView.swift in Sources */,
+				E48278162A062FB700E91FA3 /* DescriptionView.swift in Sources */,
+				E48278262A064D8000E91FA3 /* YellowBadgeView.swift in Sources */,
 				E499E96129F774A100F81C4A /* Tag.swift in Sources */,
-				E499E96429F776E400F81C4A /* FoodCardViewComponents.swift in Sources */,
+				E48278202A064A7C00E91FA3 /* NPriceView.swift in Sources */,
 				E499E95729F7744300F81C4A /* Photo.swift in Sources */,
 				E499E95D29F7748000F81C4A /* Explanation.swift in Sources */,
 				E499E95929F7745600F81C4A /* Title.swift in Sources */,
+				E48278222A064B3E00E91FA3 /* BadgeInnerStackView.swift in Sources */,
 				E48651C929EFE05300539390 /* FoodCategoryCollectionViewCell.swift in Sources */,
 				E499E95429F7722200F81C4A /* FoodCard.swift in Sources */,
 				E4614D8129F61E9F00A76AE2 /* HeaderView.swift in Sources */,
 				2AA8160E29ED5A71006C6EF9 /* HomeViewController.swift in Sources */,
+				E482781A2A06388000E91FA3 /* OuterStackView.swift in Sources */,
+				E48278242A064B9D00E91FA3 /* OrangeBadgeView.swift in Sources */,
+				E48278122A0617C400E91FA3 /* PhotoView.swift in Sources */,
 				2AA8160A29ED5A71006C6EF9 /* AppDelegate.swift in Sources */,
 				E499E95F29F7749A00F81C4A /* Price.swift in Sources */,
+				E482781E2A06456200E91FA3 /* SPriceView.swift in Sources */,
+				E48278282A064DCB00E91FA3 /* BlueBadgeView.swift in Sources */,
 				E499E95229F7620B00F81C4A /* HeaderData.swift in Sources */,
 				2AA8160C29ED5A71006C6EF9 /* SceneDelegate.swift in Sources */,
+				E48278142A06235400E91FA3 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
