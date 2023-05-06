@@ -22,7 +22,7 @@ class OuterStackView: UIStackView {
         let title = TitleView(frame: CGRect())
         let description = DescriptionView(frame: CGRect())
         let priceInnerStackView = PriceInnerStackView(frame: CGRect())
-        let badgeInnerStackView = BadgeInnerViewStackView(frame: CGRect())
+        let badgeInnerStackView = BadgeInnerStackView(frame: CGRect())
         self.addArrangedSubview(title)
         self.addArrangedSubview(description)
         self.addArrangedSubview(priceInnerStackView)
