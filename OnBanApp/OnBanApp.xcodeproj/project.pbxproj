@@ -25,15 +25,12 @@
 		E48278242A064B9D00E91FA3 /* OrangeBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278232A064B9D00E91FA3 /* OrangeBadgeView.swift */; };
 		E48278262A064D8000E91FA3 /* YellowBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278252A064D8000E91FA3 /* YellowBadgeView.swift */; };
 		E48278282A064DCB00E91FA3 /* BlueBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278272A064DCB00E91FA3 /* BlueBadgeView.swift */; };
+		E482782E2A07A27200E91FA3 /* HTTPRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E482782D2A07A27200E91FA3 /* HTTPRequestHandler.swift */; };
+		E48278302A07A28600E91FA3 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E482782F2A07A28600E91FA3 /* Parser.swift */; };
+		E48278332A07A9A100E91FA3 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278322A07A9A100E91FA3 /* Food.swift */; };
 		E48651C729EFDAD700539390 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E48651C629EFDAD700539390 /* .swiftlint.yml */; };
 		E48651C929EFE05300539390 /* FoodCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48651C829EFE05300539390 /* FoodCategoryCollectionViewCell.swift */; };
 		E499E95229F7620B00F81C4A /* HeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E95129F7620B00F81C4A /* HeaderData.swift */; };
-		E499E95429F7722200F81C4A /* FoodCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E95329F7722200F81C4A /* FoodCard.swift */; };
-		E499E95729F7744300F81C4A /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E95629F7744300F81C4A /* Photo.swift */; };
-		E499E95929F7745600F81C4A /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E95829F7745600F81C4A /* Title.swift */; };
-		E499E95D29F7748000F81C4A /* Explanation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E95C29F7748000F81C4A /* Explanation.swift */; };
-		E499E95F29F7749A00F81C4A /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E95E29F7749A00F81C4A /* Price.swift */; };
-		E499E96129F774A100F81C4A /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E96029F774A100F81C4A /* Tag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,15 +56,12 @@
 		E48278232A064B9D00E91FA3 /* OrangeBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeBadgeView.swift; sourceTree = "<group>"; };
 		E48278252A064D8000E91FA3 /* YellowBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowBadgeView.swift; sourceTree = "<group>"; };
 		E48278272A064DCB00E91FA3 /* BlueBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueBadgeView.swift; sourceTree = "<group>"; };
+		E482782D2A07A27200E91FA3 /* HTTPRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestHandler.swift; sourceTree = "<group>"; };
+		E482782F2A07A28600E91FA3 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		E48278322A07A9A100E91FA3 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		E48651C629EFDAD700539390 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		E48651C829EFE05300539390 /* FoodCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		E499E95129F7620B00F81C4A /* HeaderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderData.swift; sourceTree = "<group>"; };
-		E499E95329F7722200F81C4A /* FoodCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCard.swift; sourceTree = "<group>"; };
-		E499E95629F7744300F81C4A /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		E499E95829F7745600F81C4A /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
-		E499E95C29F7748000F81C4A /* Explanation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explanation.swift; sourceTree = "<group>"; };
-		E499E95E29F7749A00F81C4A /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
-		E499E96029F774A100F81C4A /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +105,7 @@
 				2AA8161229ED5A74006C6EF9 /* Assets.xcassets */,
 				2AA8161429ED5A74006C6EF9 /* LaunchScreen.storyboard */,
 				2AA8161729ED5A74006C6EF9 /* Info.plist */,
+				E48278312A07A35700E91FA3 /* Networking&Parsing */,
 				E499E96229F7763400F81C4A /* Views */,
 				E499E95529F7722A00F81C4A /* Models */,
 			);
@@ -134,15 +129,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E48278312A07A35700E91FA3 /* Networking&Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				E482782F2A07A28600E91FA3 /* Parser.swift */,
+				E482782D2A07A27200E91FA3 /* HTTPRequestHandler.swift */,
+			);
+			path = "Networking&Parsing";
+			sourceTree = "<group>";
+		};
 		E499E95529F7722A00F81C4A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E499E95329F7722200F81C4A /* FoodCard.swift */,
-				E499E95629F7744300F81C4A /* Photo.swift */,
-				E499E95829F7745600F81C4A /* Title.swift */,
-				E499E95C29F7748000F81C4A /* Explanation.swift */,
-				E499E95E29F7749A00F81C4A /* Price.swift */,
-				E499E96029F774A100F81C4A /* Tag.swift */,
+				E48278322A07A9A100E91FA3 /* Food.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -304,24 +303,21 @@
 				E48278182A06382000E91FA3 /* PriceInnerStackView.swift in Sources */,
 				E48278162A062FB700E91FA3 /* DescriptionView.swift in Sources */,
 				E48278262A064D8000E91FA3 /* YellowBadgeView.swift in Sources */,
-				E499E96129F774A100F81C4A /* Tag.swift in Sources */,
 				E48278202A064A7C00E91FA3 /* NPriceView.swift in Sources */,
-				E499E95729F7744300F81C4A /* Photo.swift in Sources */,
-				E499E95D29F7748000F81C4A /* Explanation.swift in Sources */,
-				E499E95929F7745600F81C4A /* Title.swift in Sources */,
 				E48278222A064B3E00E91FA3 /* BadgeInnerStackView.swift in Sources */,
 				E48651C929EFE05300539390 /* FoodCategoryCollectionViewCell.swift in Sources */,
-				E499E95429F7722200F81C4A /* FoodCard.swift in Sources */,
 				E4614D8129F61E9F00A76AE2 /* HeaderView.swift in Sources */,
 				2AA8160E29ED5A71006C6EF9 /* HomeViewController.swift in Sources */,
 				E482781A2A06388000E91FA3 /* OuterStackView.swift in Sources */,
 				E48278242A064B9D00E91FA3 /* OrangeBadgeView.swift in Sources */,
 				E48278122A0617C400E91FA3 /* PhotoView.swift in Sources */,
 				2AA8160A29ED5A71006C6EF9 /* AppDelegate.swift in Sources */,
-				E499E95F29F7749A00F81C4A /* Price.swift in Sources */,
+				E48278302A07A28600E91FA3 /* Parser.swift in Sources */,
 				E482781E2A06456200E91FA3 /* SPriceView.swift in Sources */,
 				E48278282A064DCB00E91FA3 /* BlueBadgeView.swift in Sources */,
 				E499E95229F7620B00F81C4A /* HeaderData.swift in Sources */,
+				E482782E2A07A27200E91FA3 /* HTTPRequestHandler.swift in Sources */,
+				E48278332A07A9A100E91FA3 /* Food.swift in Sources */,
 				2AA8160C29ED5A71006C6EF9 /* SceneDelegate.swift in Sources */,
 				E48278142A06235400E91FA3 /* TitleView.swift in Sources */,
 			);
