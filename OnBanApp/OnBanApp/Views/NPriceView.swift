@@ -35,10 +35,6 @@ class NPriceView: UILabel {
             return
         }
         
-        guard let lastSubViewInSuperView = superview.subviews.last else {
-            return
-        }
-        
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.widthAnchor.constraint(equalTo: superview.widthAnchor, multiplier: 0.5),

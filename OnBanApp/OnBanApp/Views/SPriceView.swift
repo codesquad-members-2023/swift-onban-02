@@ -9,7 +9,7 @@ import UIKit
 
 class SPriceView: UILabel {
     //무조건 있는놈
-    override init(frame:CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
