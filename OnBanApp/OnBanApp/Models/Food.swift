@@ -25,10 +25,19 @@ struct Item: Codable {
 }
 
 class Food {
-    private(set) var Foods: [Item] = []
+    private(set) var mainFoods: [Item] = []
     
-    func fetch(items: [Item]) {
+    func fetchParsedJson() {
         let connection = HTTPRequestHandler()
-        connection.MainDishInfo()
+        connection.mainDishInfo { result in
+            switch result {
+            case .success(let jsonString):
+                let parseTest = Parser()
+                self.mainFoods = parseTest.responseParse(jsonString: jsonString)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+
     }
 }

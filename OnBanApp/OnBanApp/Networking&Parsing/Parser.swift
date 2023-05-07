@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct Parser {
-    func responseParse(jsonString: String) {
+class Parser {
+    
+    func responseParse(jsonString: String) -> [Item] {
         guard let jsonString = jsonString.data(using: .utf8) else {
-            return
+            return []
         }
         
         let jsonData = jsonString
@@ -18,23 +19,10 @@ struct Parser {
         
         do {
             let response = try decoder.decode(Response.self, from: jsonData)
-        
+            return response.body
         } catch {
             print("Decode 실패 :", error.localizedDescription)
-        }
-    }
-    
-    private func itemParse(items: [Item]) {
-        for item in items {
-            print("Hash: \(item.detail_hash)")
-            print("Image: \(item.image)")
-            print("alt: \(item.alt)")
-            print("Delivery types: \(item.delivery_type)")
-            print("Title: \(item.title)")
-            print("Description: \(item.description)")
-            print("SPrice: \(item.s_price)")
-            print("NPrice: \(item.n_price ?? "")")
-            print("Badge: \(item.badge ?? [])")
+            return []
         }
     }
 
